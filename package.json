@@ -1,6 +1,6 @@
 {
-  "title": "Entity Works",
-  "domain": "entity.works",
+  "title": "Kappa Panel",
+  "domain": "panel.jaid.website",
   "private": true,
   "webpackConfigJaid": "webapp",
   "version": "0.1.0",
@@ -59,7 +59,7 @@
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.3",
     "sitemap": "^3.2.2",
-    "webpack-config-jaid": "^5.23.1"
+    "webpack-config-jaid": "^5.24.0"
   },
   "scripts": {
     "clean": "rimraf dist/",
