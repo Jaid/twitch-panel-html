@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap&subset=hebrew,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 
-.twitchMode {
-  background     : #0f0e11;
+.container {
   height         : 100vh;
   display        : flex;
   align-items    : center;
   justify-content: center;
+}
+
+.twitchMode {
+  background: #0f0e11;
 }
