@@ -1,0 +1,66 @@
+.container {
+  margin-top   : 12px;
+  margin-bottom: 12px;
+  font-size    : 12px;
+  font-family  : Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.header {
+  background   : #232127;
+  color        : #b8b5c0;
+  padding      : 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.leftIcon {
+  fill          : #b8b5c0;
+  width         : 20px;
+  height        : 20px;
+  vertical-align: text-bottom;
+  margin-right  : 4px;
+}
+
+.rightIcon {
+  fill          : #b8b5c0;
+  width         : 20px;
+  height        : 20px;
+  vertical-align: text-bottom;
+  float         : right
+}
+
+.welcome {
+  color        : #b8b5c0;
+  margin-bottom: 12px;
+}
+
+.name {
+  color      : rgb(99, 222, 255);
+  font-weight: 600;
+  margin-top : 1px;
+}
+
+.chat {
+  padding   : 12px;
+  background: #0f0e11;
+}
+
+.line {
+  display    : flex;
+  align-items: center;
+}
+
+.badge {
+  margin-right: 3px;
+}
+
+.colon {
+  margin-top: 1px;
+}
+
+.message {
+  margin-left: 3px;
+  margin-top : 1px;
+}

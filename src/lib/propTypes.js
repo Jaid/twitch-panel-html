@@ -15,7 +15,8 @@ import PropTypes from "prop-types"
   *   hasLink: boolean,
   *   titleWeight: number,
   *   content: string,
-  *   backgroundStripesColor: string
+  *   backgroundStripesColor: string,
+  *   contentPadding: number
   * }} Props
   */
 
@@ -30,6 +31,7 @@ export const defaultProps = {
   titleSize: 36,
   titlePadding: 12,
   titleWeight: 300,
+  contentPadding: 12,
 }
 
 export default {
@@ -52,4 +54,5 @@ export default {
   titleWeight: PropTypes.number,
   content: PropTypes.string,
   backgroundStripesColor: PropTypes.string,
+  contentPadding: PropTypes.number,
 }
