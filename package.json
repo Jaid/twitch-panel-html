@@ -17,7 +17,8 @@
     "react": "^16.8.6",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.8.6",
-    "react-google-font-loader": "^1.0.5"
+    "react-google-font-loader": "^1.0.5",
+    "react-string-replace": "^0.4.4"
   },
   "devDependencies": {
     "@absolunet/fsp": "^1.6.1",
@@ -36,7 +37,6 @@
     "param-case": "^2.1.1",
     "prevent-end": "^1.0.6",
     "react-hot-loader": "^4.12.10",
-    "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.3",
     "sitemap": "^3.2.2",
