@@ -1,6 +1,6 @@
 {
   "title": "Kappa Panel",
-  "domain": "panel.jaid.website",
+  "domain": "panel.jaid.codes",
   "private": true,
   "webpackConfigJaid": "webapp",
   "version": "1.0.0",
