@@ -3,12 +3,13 @@ import classnames from "classnames"
 import color from "color"
 import Title from "components/Title"
 import propTypes, {defaultProps} from "lib/propTypes"
+import RichText from "components/RichText"
 
 import css from "./style.scss"
 
 /**
   * @class
-  * @extends {React.Component<Props>}
+  * @extends {React.Component<import("../../lib/propTypes").Props>}
   */
 export default class Panel extends React.Component {
 
@@ -27,6 +28,7 @@ export default class Panel extends React.Component {
     return <div className={classnames(css.container, this.props.className)}>
       <div className={css.panel} style={panelStyle}>
         <Title {...this.props}/>
+        {this.props.content && <RichText/>}
       </div>
     </div>
   }
