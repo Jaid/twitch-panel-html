@@ -1,3 +1,12 @@
 import {parse} from "query-string"
 
-export default parse(document.location.search)
+/**
+ * @type {Object}
+ * @string {}
+ */
+const query = parse(document.location.search)
+
+export default {
+  mode: "twitch",
+  ...query,
+}

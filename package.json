@@ -8,6 +8,7 @@
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "classnames": "^2.2.6",
+    "color": "^3.1.2",
     "debug": "^4.1.1",
     "fork-awesome": "^1.1.7",
     "lodash": "^4.17.15",
