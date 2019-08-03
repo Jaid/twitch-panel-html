@@ -9,4 +9,7 @@ export default configure({
   icon: path.join(__dirname, "icon.png"),
   createCssFile: false,
   inlineSource: true,
+  extraProduction: {
+    devtool: "eval-source-map", // inlines SourceMap per module
+  },
 })

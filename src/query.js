@@ -2,11 +2,11 @@ import {parse} from "query-string"
 
 /**
  * @type {Object}
- * @string {}
  */
 const query = parse(document.location.search)
 
-export default {
+const defaults = {
   mode: "twitch",
-  ...query,
 }
+
+export default Object.assign(defaults, query)
