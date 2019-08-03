@@ -4,6 +4,7 @@ import query from "src/query"
 import Panel from "components/Panel"
 import classnames from "classnames"
 import GoogleFontLoader from "react-google-font-loader"
+import "fork-awesome/css/fork-awesome.min.css"
 
 import fonts from "./fonts.yml"
 import "modern-normalize"

@@ -15,20 +15,19 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.leftIcon {
+.icon {
   fill          : #b8b5c0;
   width         : 20px;
   height        : 20px;
   vertical-align: text-bottom;
-  margin-right  : 4px;
+}
+
+.leftIcon {
+  margin-right: 4px;
 }
 
 .rightIcon {
-  fill          : #b8b5c0;
-  width         : 20px;
-  height        : 20px;
-  vertical-align: text-bottom;
-  float         : right
+  float: right
 }
 
 .welcome {
@@ -48,12 +47,12 @@
 }
 
 .line {
-  display    : flex;
-  align-items: center;
+  line-height: 140%;
 }
 
 .badge {
-  margin-right: 3px;
+  margin-right  : 3px;
+  vertical-align: sub;
 }
 
 .colon {

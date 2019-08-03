@@ -24,8 +24,7 @@ export default class RichText extends React.Component {
   static defaultProps = defaultProps
 
   render() {
-    // const processedRichText = reactStringReplace(this.props.content, /{(.+?)}/g, token => {
-    const processedRichText = reactStringReplace("Lorem {bold:ipsum} {colored:dolor} {colorbold:sit} {chat:!hi}, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", /{(.+?)}/g, token => {
+    const processedRichText = reactStringReplace(this.props.content, /{(.+?)}/g, token => {
       const typeMatch = /^(?<type>[a-z]+):(?<name>.+)/.exec(token)
       if (typeMatch.groups.type === "bold") {
         return <b>{typeMatch.groups.name}</b>
@@ -56,7 +55,7 @@ export default class RichText extends React.Component {
     const style = {
       color: "white",
       fontSize: "18px",
-      fontFamily: "Ubuntu",
+      fontFamily: "Montserrat",
       fontWeight: 400,
       boxShadow: `0 0 5px ${boxShadowColor} inset`,
       borderTop: `2px solid ${borderColor}`,

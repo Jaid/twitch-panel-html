@@ -16,7 +16,7 @@ import PropTypes from "prop-types"
   *   titleWeight: number,
   *   content: string,
   *   backgroundStripesColor: string,
-  *   contentPadding: number
+  *   contentPadding: number,
   * }} Props
   */
 

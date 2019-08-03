@@ -34,6 +34,7 @@ export default class Title extends React.Component {
      const content = this.props.title
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
        {content}
+       {this.props.hasLink && <i className={classnames("fa", "fa-link", css.linkIcon)}/>}
      </div>
    }
 
