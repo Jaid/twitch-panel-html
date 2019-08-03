@@ -15,7 +15,9 @@ import css from "./style.scss"
   *   borderWidth: number,
   *   borderTopRightRadius: number,
   *   title: string,
-  *   titleUppercase: boolean
+  *   titleUppercase: boolean,
+  *   titleSize: number,
+  *   titlePadding: number
   * }} Props
   */
 
@@ -40,6 +42,8 @@ export default class Panel extends React.Component {
     borderTopRightRadius: PropTypes.number,
     title: PropTypes.string,
     titleUppercase: PropTypes.bool,
+    titleSize: PropTypes.number,
+    titlePadding: PropTypes.number,
   }
 
   static defaultProps ={
@@ -51,6 +55,8 @@ export default class Panel extends React.Component {
     borderTopRightRadius: 30,
     title: "Title",
     titleUppercase: true,
+    titleSize: 30,
+    titlePadding: 12,
   }
 
   render() {
@@ -65,6 +71,8 @@ export default class Panel extends React.Component {
       border: `${this.props.borderWidth}px solid ${textColor}`,
       boxShadow: `0 0 3px ${farGlowColor}, 0 0 3px ${farGlowColor} inset`,
       borderTopRightRadius: `${this.props.borderTopRightRadius}px`,
+      fontSize: `${this.props.titleSize}px`,
+      padding: `${this.props.titlePadding}px`,
     }
     const content = <span>{this.props.titleUppercase ? this.props.title.toUpperCase() : this.props.title}</span>
     return <div className={classnames(css.container, this.props.className)}>
