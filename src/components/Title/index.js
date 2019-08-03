@@ -17,9 +17,10 @@ export default class Title extends React.Component {
      const textColor = color(this.props.titleColor).lighten(1)
      const nearGlowColor = color(this.props.titleColor).lighten(0.5)
      const farGlowColor = color(this.props.titleColor)
+     const backgroundStripesColor = this.props.backgroundStripesColor || color(this.props.titleColor).lighten(0.25).alpha(0.1)
      const wrapperStyle = {
        backgroundColor: this.props.backgroundColor,
-       backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent ${this.props.backgroundStripesSize / 2}px, rgba(255, 255, 255, ${this.props.backgroundStripesOpacity}) ${this.props.backgroundStripesSize / 2}px, rgba(255, 255, 255, ${this.props.backgroundStripesOpacity}) ${this.props.backgroundStripesSize}px)`,
+       backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize}px)`,
        textShadow: `0 0 2px rgba(0, 0, 0, 0.5), 0 0 5px ${nearGlowColor}, 0 0 8px ${farGlowColor}`,
        color: textColor,
        fontSize: `${this.props.titleSize}px`,

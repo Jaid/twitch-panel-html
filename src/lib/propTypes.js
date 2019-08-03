@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
   * @typedef {{
   *   className: *,
   *   backgroundStripesSize: number,
-  *   backgroundStripesOpacity: number,
   *   backgroundColor: string,
   *   titleColor: string,
   *   borderWidth: number,
@@ -15,13 +14,13 @@ import PropTypes from "prop-types"
   *   titlePadding: number,
   *   hasLink: boolean,
   *   titleWeight: number,
-  *   content: string
+  *   content: string,
+  *   backgroundStripesColor: string
   * }} Props
   */
 
 export const defaultProps = {
   backgroundStripesSize: 4,
-  backgroundStripesOpacity: 0.02,
   backgroundColor: "rgb(23, 23, 23)",
   titleColor: "hsl(0, 100%, 50%)",
   borderWidth: 2,
@@ -41,7 +40,6 @@ export default {
     PropTypes.arrayOf(PropTypes.object),
   ]),
   backgroundStripesSize: PropTypes.number,
-  backgroundStripesOpacity: PropTypes.number,
   backgroundColor: PropTypes.string,
   titleColor: PropTypes.string,
   borderWidth: PropTypes.number,
@@ -53,4 +51,5 @@ export default {
   hasLink: PropTypes.bool,
   titleWeight: PropTypes.number,
   content: PropTypes.string,
+  backgroundStripesColor: PropTypes.string,
 }
