@@ -32,7 +32,7 @@ export default class RichText extends React.Component {
       boxShadow: `0 0 5px ${boxShadowColor} inset`,
       borderTop: `2px solid ${borderColor}`,
     }
-    const content = <span>Component RichText</span>
+    const content = <span>{this.props.content}</span>
     return <div className={classnames(css.container, this.props.className)} style={style}>
       {content}
     </div>

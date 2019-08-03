@@ -28,7 +28,7 @@ export default class Panel extends React.Component {
     return <div className={classnames(css.container, this.props.className)}>
       <div className={css.panel} style={panelStyle}>
         <Title {...this.props}/>
-        {this.props.content && <RichText/>}
+        {this.props.content && <RichText {...this.props}/>}
       </div>
     </div>
   }
