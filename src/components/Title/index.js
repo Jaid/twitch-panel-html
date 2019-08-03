@@ -7,7 +7,7 @@ import css from "./style.scss"
 
 /**
   * @class
-  * @extends {React.Component<import("../Panel").Props>}
+  * @extends {React.Component<import("../../lib/propTypes").Props>}
   */
 export default class Title extends React.Component {
 

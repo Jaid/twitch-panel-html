@@ -2,26 +2,9 @@ import React from "react"
 import classnames from "classnames"
 import color from "color"
 import Title from "components/Title"
-import propTypes from "lib/propTypes"
+import propTypes, {defaultProps} from "lib/propTypes"
 
 import css from "./style.scss"
-
-/**
-  * @typedef {{
-  *   className: *,
-  *   backgroundStripesSize: number,
-  *   backgroundStripesOpacity: number,
-  *   backgroundColor: string,
-  *   titleColor: string,
-  *   borderWidth: number,
-  *   borderTopRightRadius: number,
-  *   title: string,
-  *   titleUppercase: boolean,
-  *   titleSize: number,
-  *   titlePadding: number,
-  *   hasLink: boolean
-  * }} Props
-  */
 
 /**
   * @class
@@ -31,18 +14,7 @@ export default class Panel extends React.Component {
 
   static propTypes = propTypes
 
-  static defaultProps = {
-    backgroundStripesSize: 4,
-    backgroundStripesOpacity: 0.02,
-    backgroundColor: "rgb(23, 23, 23)",
-    titleColor: "hsl(0, 100%, 50%)",
-    borderWidth: 2,
-    borderTopRightRadius: 30,
-    title: "Panel",
-    titleUppercase: true,
-    titleSize: 36,
-    titlePadding: 12,
-  }
+  static defaultProps = defaultProps
 
   render() {
     const borderColor = color(this.props.titleColor).lighten(0.6)
