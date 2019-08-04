@@ -31,13 +31,13 @@ export default class RichText extends React.Component {
       }
       if (typeMatch.groups.type === "colored") {
         const style = {
-          color: color(this.props.titleColor).mix(color("white"), 0.4),
+          color: color(this.props.themeColor).mix(color("white"), 0.4),
         }
         return <span style={style}>{typeMatch.groups.name}</span>
       }
       if (typeMatch.groups.type === "colorbold") {
         const style = {
-          color: color(this.props.titleColor).mix(color("white"), 0.4),
+          color: color(this.props.themeColor).mix(color("white"), 0.4),
         }
         return <b style={style}>{typeMatch.groups.name}</b>
       }
@@ -49,9 +49,9 @@ export default class RichText extends React.Component {
     const formattedText = reactStringReplace(processedRichText, "\n", () => {
       return <br key={i++}/>
     })
-    const borderColor = color(this.props.titleColor).lighten(0.6)
-    const boxShadowColor = color(this.props.titleColor)
-    const topColor = color(this.props.titleColor).mix(color("black"), 0.95)
+    const borderColor = color(this.props.themeColor).lighten(0.6)
+    const boxShadowColor = color(this.props.themeColor)
+    const topColor = color(this.props.themeColor).mix(color("black"), 0.95)
     const style = {
       color: "white",
       fontSize: "18px",

@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
   *   className: *,
   *   backgroundStripesSize: number,
   *   backgroundColor: string,
-  *   titleColor: string,
+  *   themeColor: string,
   *   borderWidth: number,
   *   borderTopRightRadius: number,
   *   title: string,
@@ -17,13 +17,14 @@ import PropTypes from "prop-types"
   *   content: string,
   *   backgroundStripesColor: string,
   *   contentPadding: number,
+  *   icon: string
   * }} Props
   */
 
 export const defaultProps = {
   backgroundStripesSize: 4,
   backgroundColor: "rgb(23, 23, 23)",
-  titleColor: "hsl(0, 100%, 50%)",
+  themeColor: "hsl(0, 100%, 50%)",
   borderWidth: 2,
   borderTopRightRadius: 30,
   title: "Panel",
@@ -43,7 +44,7 @@ export default {
   ]),
   backgroundStripesSize: PropTypes.number,
   backgroundColor: PropTypes.string,
-  titleColor: PropTypes.string,
+  themeColor: PropTypes.string,
   borderWidth: PropTypes.number,
   borderTopRightRadius: PropTypes.number,
   title: PropTypes.string,
@@ -55,4 +56,5 @@ export default {
   content: PropTypes.string,
   backgroundStripesColor: PropTypes.string,
   contentPadding: PropTypes.number,
+  icon: PropTypes.string,
 }

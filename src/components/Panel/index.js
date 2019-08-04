@@ -18,8 +18,8 @@ export default class Panel extends React.Component {
   static defaultProps = defaultProps
 
   render() {
-    const borderColor = color(this.props.titleColor).lighten(0.6)
-    const boxShadowColor = color(this.props.titleColor)
+    const borderColor = color(this.props.themeColor).lighten(0.6)
+    const boxShadowColor = color(this.props.themeColor)
     const panelStyle = {
       border: `${this.props.borderWidth}px solid ${borderColor}`,
       borderTopRightRadius: `${this.props.borderTopRightRadius}px`,
