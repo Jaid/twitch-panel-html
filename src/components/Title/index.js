@@ -21,7 +21,7 @@ export default class Title extends React.Component {
      const wrapperStyle = {
        backgroundColor: this.props.backgroundColor,
        backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize}px)`,
-       textShadow: `0 0 2px rgba(0, 0, 0, 0.5), 0 0 5px ${nearGlowColor}, 0 0 8px ${farGlowColor}`,
+       textShadow: `0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 5px ${nearGlowColor}, 0 0 8px ${farGlowColor}`,
        color: textColor,
        fontSize: `${this.props.titleSize}px`,
        padding: `${this.props.titlePadding}px`,
@@ -33,7 +33,7 @@ export default class Title extends React.Component {
      }
      const content = this.props.title
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
-       {this.props.icon && <i className={classnames("fa", `fa-${  this.props.icon}`, css.titleIcon)}/>}
+       {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)}/>}
        {content}
        {this.props.hasLink && <i className={classnames("fa", "fa-link", css.linkIcon)}/>}
      </div>
