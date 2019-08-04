@@ -17,7 +17,7 @@ export default class Title extends React.Component {
      const textColor = color(this.props.themeColor).lighten(1)
      const nearGlowColor = color(this.props.themeColor).lighten(0.5)
      const farGlowColor = color(this.props.themeColor)
-     const backgroundStripesColor = this.props.backgroundStripesColor || color(this.props.themeColor).lighten(0.25).alpha(0.1)
+     const backgroundStripesColor = this.props.backgroundStripesColor || color(this.props.themeColor).lighten(0.3).alpha(0.03)
      const wrapperStyle = {
        backgroundColor: this.props.backgroundColor,
        backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize}px)`,
