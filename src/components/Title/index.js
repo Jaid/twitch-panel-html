@@ -28,12 +28,15 @@ export default class Title extends React.Component {
        borderTopRightRadius: `${this.props.borderTopRightRadius}px`,
        boxShadow: "0 0 3px black inset",
      }
+     const iconStyle = {
+       fontSize: `${this.props.iconSize}px`,
+     }
      if (this.props.titleUppercase) {
        wrapperStyle.textTransform = "uppercase"
      }
      const content = this.props.title
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
-       {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)}/>}
+       {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)} style={iconStyle}/>}
        <span className={css.text}>{content}</span>
        {this.props.hasLink && <i className={classnames("fa", "fa-link", css.linkIcon)}/>}
      </div>

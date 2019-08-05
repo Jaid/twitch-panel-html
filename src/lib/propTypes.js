@@ -17,7 +17,8 @@ import PropTypes from "prop-types"
   *   content: string,
   *   backgroundStripesColor: string,
   *   contentPadding: number,
-  *   icon: string
+  *   icon: string,
+  *   iconSize: number
   * }} Props
   */
 
@@ -30,9 +31,10 @@ export const defaultProps = {
   title: "Panel",
   titleUppercase: true,
   titleSize: 36,
-  titlePadding: 12,
+  titlePadding: 16,
   titleWeight: 300,
   contentPadding: 12,
+  iconSize: 40,
 }
 
 export default {
@@ -57,4 +59,5 @@ export default {
   backgroundStripesColor: PropTypes.string,
   contentPadding: PropTypes.number,
   icon: PropTypes.string,
+  iconSize: PropTypes.number,
 }
