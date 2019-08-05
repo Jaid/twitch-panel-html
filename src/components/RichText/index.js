@@ -41,6 +41,12 @@ export default class RichText extends React.Component {
         }
         return <b style={style}>{typeMatch.groups.name}</b>
       }
+      if (typeMatch.groups.type === "br") {
+        const style = {
+          height: `${typeMatch.groups.name}px`,
+        }
+        return <div style={style}/>
+      }
       if (typeMatch.groups.type === "chat") {
         return <Chat>{typeMatch.groups.name}</Chat>
       }

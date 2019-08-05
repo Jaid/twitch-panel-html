@@ -9,6 +9,6 @@ const defaults = {
   mode: "twitch",
 }
 
-// query.icon = "toggle-off"
+query.content = "a\nb{br:20}c"
 
 export default Object.assign(defaults, query)
