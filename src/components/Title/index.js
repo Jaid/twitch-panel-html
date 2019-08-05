@@ -33,8 +33,8 @@ export default class Title extends React.Component {
      }
      const content = this.props.title
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
-       {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon, css.verticalAlign)}/>}
-       <span className={classnames(css.verticalAlign, css.text)}>{content}</span>
+       {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)}/>}
+       <span className={css.text}>{content}</span>
        {this.props.hasLink && <i className={classnames("fa", "fa-link", css.linkIcon)}/>}
      </div>
    }

@@ -9,6 +9,6 @@ const defaults = {
   mode: "twitch",
 }
 
-// query.icon = "terminal"
+// query.icon = "toggle-off"
 
 export default Object.assign(defaults, query)

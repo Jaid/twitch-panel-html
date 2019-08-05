@@ -2,16 +2,16 @@
   font-family: Jura, sans-serif;
   text-align : center;
   position   : relative;
+  align-items: center;
+  display    : flex;
 }
 
 .titleIcon {
   margin-right: 12px;
 }
 
-.text {}
-
-.verticalAlign {
-  vertical-align: middle;
+.text {
+  flex: 1
 }
 
 .linkIcon {
