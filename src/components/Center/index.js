@@ -22,7 +22,7 @@ export default class Center extends React.Component {
 
   static propTypes = {
     ...propTypes,
-    icon: PropTypes.string,
+    centerIcon: PropTypes.string,
   }
 
   static defaultProps = defaultProps
@@ -41,7 +41,7 @@ export default class Center extends React.Component {
       fontSize: `${this.props.centerFontSize || this.props.contentFontSize}px`,
     }
     return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
-      {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.icon)} style={iconStyle}/>}
+      {this.props.centerIcon && <i className={classnames("fa", `fa-${this.props.centerIcon}`, css.icon)} style={iconStyle}/>}
       <span className={css.text} style={textStyle}>{this.props.children}</span>
     </div>
   }

@@ -50,7 +50,7 @@ export default class RichText extends React.Component {
       }
       if (typeMatch.groups.type === "iconcenter") {
         const {icon, text} = /(?<icon>.+?)\/(?<text>.+)/.exec(typeMatch.groups.name).groups
-        return <Center {...this.props} icon={icon}>{text}</Center>
+        return <Center {...this.props} centerIcon={icon}>{text}</Center>
       }
     })
     let i
