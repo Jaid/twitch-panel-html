@@ -9,6 +9,4 @@ const defaults = {
   mode: "twitch",
 }
 
-query.hasLink = 1
-
 export default Object.assign(defaults, query)
