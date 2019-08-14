@@ -29,12 +29,20 @@ export default class Center extends React.Component {
 
   render() {
     const backgroundColor = color(this.props.themeColor).lightness(60).alpha(0.2)
-    const style = {
+    const wrapperStyle = {
       background: `linear-gradient(to right, transparent, ${backgroundColor} 20%, ${backgroundColor} 80%, transparent 100%)`,
     }
-    return <div className={classnames(css.container, this.props.className)} style={style}>
-      {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.icon)}/>}
-      <span className={css.text}>{this.props.children}</span>
+    const iconStyle = {
+      fontSize: `${this.props.centerIconSize}px`,
+    }
+    const textStyle = {
+      fontFamily: this.props.centerFont || this.props.contentFont,
+      fontWeight: this.props.centerFontWeight || this.props.contentFontWeight,
+      fontSize: this.props.centerFontSize || this.props.contentFontSize,
+    }
+    return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
+      {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.icon)} style={iconStyle}/>}
+      <span className={css.text} style={textStyle}>{this.props.children}</span>
     </div>
   }
 

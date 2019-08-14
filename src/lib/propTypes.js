@@ -18,7 +18,14 @@ import PropTypes from "prop-types"
   *   backgroundStripesColor: string,
   *   contentPadding: number,
   *   icon: string,
-  *   iconSize: number
+  *   iconSize: number,
+  *   contentFontSize: number,
+  *   centerFontSize: number,
+  *   contentFont: string,
+  *   contentFontWeight: number,
+  *   centerFont: string,
+  *   centerFontWeight: number,
+  *   centerIconSize: number,
   * }} Props
   */
 
@@ -27,14 +34,18 @@ export const defaultProps = {
   backgroundColor: "rgb(23, 23, 23)",
   themeColor: "hsl(0, 100%, 50%)",
   borderWidth: 2,
-  borderTopRightRadius: 30,
+  borderTopRightRadius: 0,
   title: "Panel",
   titleUppercase: true,
   titleSize: 36,
   titlePadding: 16,
   titleWeight: 300,
   contentPadding: 12,
+  contentFontSize: 16,
+  contentFontWeight: 400,
+  contentFont: "Montserrat",
   iconSize: 40,
+  centerIconSize: 32,
 }
 
 export default {
@@ -60,4 +71,11 @@ export default {
   contentPadding: PropTypes.number,
   icon: PropTypes.string,
   iconSize: PropTypes.number,
+  contentFontSize: PropTypes.number,
+  contentFont: PropTypes.string,
+  contentFontWeight: PropTypes.number,
+  centerFont: PropTypes.string,
+  centerFontWeight: PropTypes.number,
+  centerFontSize: PropTypes.number,
+  centerIconSize: PropTypes.number,
 }

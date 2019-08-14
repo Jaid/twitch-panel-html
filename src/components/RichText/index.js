@@ -9,12 +9,6 @@ import Center from "components/Center"
 import css from "./style.scss"
 
 /**
-  * @typedef {{
-  *   className: *,
-  * }} Props
-  */
-
-/**
   * @class
   * @extends {React.Component<import("../../lib/propTypes").Props>}
   */
@@ -68,9 +62,9 @@ export default class RichText extends React.Component {
     const topColor = color(this.props.themeColor).mix(color("black"), 0.95)
     const style = {
       color: "white",
-      fontSize: "18px",
-      fontFamily: "Montserrat",
-      fontWeight: 400,
+      fontSize: `${this.props.contentFontSize}px`,
+      fontFamily: this.props.contentFont,
+      fontWeight: this.props.contentFontWeight,
       boxShadow: `0 0 5px ${boxShadowColor} inset`,
       borderTop: `2px solid ${borderColor}`,
       padding: `${this.props.contentPadding}px`,
