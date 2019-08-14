@@ -24,8 +24,8 @@ export default class RichText extends React.Component {
   static defaultProps = defaultProps
 
   render() {
-    const processedRichText = reactStringReplace(this.props.content, /{(.+?)}/g, token => {
-      const typeMatch = /^(?<type>[a-z]+):(?<name>.+)/.exec(token)
+    const processedRichText = reactStringReplace(this.props.content, new RegExp("{(.+?)}", "gs"), token => {
+      const typeMatch = new RegExp("(?<type>[a-z]+):(?<name>.+)", "gs").exec(token)
       if (typeMatch.groups.type === "bold") {
         return <b>{typeMatch.groups.name}</b>
       }
@@ -48,6 +48,7 @@ export default class RichText extends React.Component {
         return <div style={style}/>
       }
       if (typeMatch.groups.type === "chat") {
+        console.log(typeMatch.groups.name)
         return <Chat>{typeMatch.groups.name}</Chat>
       }
     })

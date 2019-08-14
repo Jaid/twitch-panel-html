@@ -1,10 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import classnames from "classnames"
+import {isString} from "lodash"
 
 import primeBadge from "./primeBadge.png"
 import broadcasterBadge from "./broadcasterBadge.png"
 import css from "./style.scss"
+
 
 /**
   * @typedef {{
@@ -26,10 +28,17 @@ export default class Chat extends React.Component {
       PropTypes.arrayOf(PropTypes.string),
       PropTypes.arrayOf(PropTypes.object),
     ]),
-    children: PropTypes.node,
+    children: PropTypes.string,
   }
 
   render() {
+    const content = String(this.props.children).split("\n").map(line => <div className={css.line}>
+      <img className={css.badge} src={broadcasterBadge}/>
+      <img className={css.badge} src={primeBadge}/>
+      <span className={css.name}>Jaidchen</span>
+      <span className={css.colon}>:</span>
+      <span className={css.message}>{line}</span>
+    </div>)
     return <div className={classnames(css.container, this.props.className)}>
       <div className={css.header}>
         <svg className={classnames(css.icon, css.leftIcon)} version="1.1"><path d="M9.2 4.528a.933.933 0 0 1-.2-.573C9 3.427 9.448 3 10 3h8c.217 0 .427.066.6.19a.926.926 0 0 1 .2 1.337l-4 5.09a1.03 1.03 0 0 1-1.6 0l-4-5.09zM2 15h11a1 1 0 1 1 0 2H2a1.001 1.001 0 0 1 0-2zm0-5h7a1 1 0 1 1 0 2H2a1.001 1.001 0 0 1 0-2zm0-5h3a1 1 0 1 1 0 2H2a1.001 1.001 0 0 1 0-2z" fillRule="evenodd"/></svg>
@@ -38,12 +47,7 @@ export default class Chat extends React.Component {
       </div>
       <div className={css.chat}>
         <div className={css.welcome}>Welcome to the chat room!</div>
-        <div className={css.line}>
-          <img className={css.badge} src={broadcasterBadge}/>
-          <img className={css.badge} src={primeBadge}/>
-          <span className={css.name}>Jaidchen</span>
-          <span className={css.colon}>:</span>
-          <span className={css.message}>{this.props.children}</span></div>
+        {content}
       </div>
     </div>
   }
