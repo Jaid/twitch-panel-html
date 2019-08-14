@@ -23,7 +23,6 @@ export default class Title extends React.Component {
        backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize / 2}px, ${backgroundStripesColor} ${this.props.backgroundStripesSize}px)`,
        textShadow: `0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 5px ${nearGlowColor}, 0 0 8px ${farGlowColor}`,
        color: textColor,
-       fontSize: `${this.props.titleSize}px`,
        padding: `${this.props.titlePadding}px`,
        borderTopRightRadius: `${this.props.borderTopRightRadius}px`,
        boxShadow: "0 0 3px black inset",
@@ -31,13 +30,18 @@ export default class Title extends React.Component {
      const iconStyle = {
        fontSize: `${this.props.iconSize}px`,
      }
+     const textStyle = {
+       fontFamily: this.props.titleFont,
+       fontSize: this.props.titleFontSize,
+       fontWeight: this.props.titleFontWeight,
+     }
      if (this.props.titleUppercase) {
        wrapperStyle.textTransform = "uppercase"
      }
      const content = this.props.title
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
        {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)} style={iconStyle}/>}
-       <span className={css.text}>{content}</span>
+       <span className={css.text} style={textStyle}>{content}</span>
        {this.props.hasLink && <i className={classnames("fa", "fa-link", css.linkIcon)}/>}
      </div>
    }

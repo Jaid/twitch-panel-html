@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
   *   borderTopRightRadius: number,
   *   title: string,
   *   titleUppercase: boolean,
-  *   titleSize: number,
   *   titlePadding: number,
   *   hasLink: boolean,
   *   titleWeight: number,
@@ -26,6 +25,9 @@ import PropTypes from "prop-types"
   *   centerFont: string,
   *   centerFontWeight: number,
   *   centerIconSize: number,
+  *   titleFont: string,
+  *   titleFontSize: number,
+  *   titleFontWeight: number
   * }} Props
   */
 
@@ -37,15 +39,17 @@ export const defaultProps = {
   borderTopRightRadius: 0,
   title: "Panel",
   titleUppercase: true,
-  titleSize: 36,
   titlePadding: 16,
   titleWeight: 300,
   contentPadding: 12,
-  contentFontSize: 16,
+  contentFontSize: 14,
   contentFontWeight: 400,
   contentFont: "Montserrat",
-  iconSize: 40,
+  iconSize: 36,
   centerIconSize: 32,
+  titleFont: "Lexend Deca",
+  titleFontSize: 32,
+  titleFontWeight: 400,
 }
 
 export default {
@@ -62,7 +66,6 @@ export default {
   borderTopRightRadius: PropTypes.number,
   title: PropTypes.string,
   titleUppercase: PropTypes.bool,
-  titleSize: PropTypes.number,
   titlePadding: PropTypes.number,
   hasLink: PropTypes.bool,
   titleWeight: PropTypes.number,
@@ -78,4 +81,7 @@ export default {
   centerFontWeight: PropTypes.number,
   centerFontSize: PropTypes.number,
   centerIconSize: PropTypes.number,
+  titleFont: PropTypes.string,
+  titleFontSize: PropTypes.number,
+  titleFontWeight: PropTypes.number,
 }

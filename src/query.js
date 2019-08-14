@@ -1,7 +1,7 @@
 import {parse} from "query-string"
 
 /**
- * @type {Object}
+ * @type {import("./lib/propTypes").Props}
  */
 const query = parse(document.location.search)
 

@@ -6,7 +6,7 @@ import classnames from "classnames"
 import GoogleFontLoader from "react-google-font-loader"
 import "fork-awesome/css/fork-awesome.min.css"
 
-import fonts from "./fonts.yml"
+import fonts from "./fonts"
 import "modern-normalize"
 import css from "./style.scss"
 
