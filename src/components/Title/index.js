@@ -33,7 +33,7 @@ export default class Title extends React.Component {
      }
      const textStyle = {
        fontFamily: this.props.titleFont,
-       fontSize: this.props.titleFontSize,
+       fontSize: `${this.props.titleFontSize}px`,
        fontWeight: this.props.titleFontWeight,
      }
      if (this.props.titleUppercase) {
