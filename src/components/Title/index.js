@@ -3,6 +3,7 @@ import classnames from "classnames"
 import propTypes from "lib/propTypes"
 import color from "color"
 
+import pointerImage from "./pointer.png"
 import css from "./style.scss"
 
 /**
@@ -42,7 +43,7 @@ export default class Title extends React.Component {
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
        {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)} style={iconStyle}/>}
        <span className={css.text} style={textStyle}>{content}</span>
-       {this.props.hasLink && <i className={classnames("fa", "fa-link", css.linkIcon)}/>}
+       {this.props.hasLink && <span className={css.linkNotice}><img className={css.linkPointerImage} src={pointerImage}/><i className={classnames("fa", "fa-link", css.linkIcon)}/></span>}
      </div>
    }
 
