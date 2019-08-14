@@ -1,6 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
 import classnames from "classnames"
+import color from "color"
+import propTypes, {defaultProps} from "lib/propTypes"
 
 import primeBadge from "./primeBadge.png"
 import broadcasterBadge from "./broadcasterBadge.png"
@@ -15,25 +16,22 @@ import css from "./style.scss"
 
 /**
   * @class
-  * @extends {React.Component<Props>}
+  * @extends {React.Component<import("../../lib/propTypes").Props>}
   */
 export default class Chat extends React.Component {
 
-  static propTypes = {
-    className: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.arrayOf(PropTypes.string),
-      PropTypes.arrayOf(PropTypes.object),
-    ]),
-    children: PropTypes.string,
-  }
+  static propTypes = propTypes
+
+  static defaultProps = defaultProps
 
   render() {
+    const nicknameStyle = {
+      color: color(this.props.themeColor).lightness(75),
+    }
     const content = String(this.props.children).split("\n").map((line, index) => <div key={index} className={css.line}>
       <img className={css.badge} src={broadcasterBadge}/>
       <img className={css.badge} src={primeBadge}/>
-      <span className={css.name}>Jaidchen</span>
+      <span className={css.name} style={nicknameStyle}>Jaidchen</span>
       <span className={css.colon}>:</span>
       <span className={css.message}>{line}</span>
     </div>)

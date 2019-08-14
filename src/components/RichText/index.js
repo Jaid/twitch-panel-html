@@ -4,6 +4,7 @@ import propTypes, {defaultProps} from "lib/propTypes"
 import color from "color"
 import reactStringReplace from "react-string-replace"
 import Chat from "components/Chat"
+import Center from "components/Center"
 
 import css from "./style.scss"
 
@@ -48,8 +49,14 @@ export default class RichText extends React.Component {
         return <div style={style}/>
       }
       if (typeMatch.groups.type === "chat") {
-        console.log(typeMatch.groups.name)
-        return <Chat>{typeMatch.groups.name}</Chat>
+        return <Chat {...this.props}>{typeMatch.groups.name}</Chat>
+      }
+      if (typeMatch.groups.type === "center") {
+        return <Center {...this.props}>{typeMatch.groups.name}</Center>
+      }
+      if (typeMatch.groups.type === "iconcenter") {
+        const {icon, text} = /(?<icon>.+?)\/(?<text>.+)/.exec(typeMatch.groups.name).groups
+        return <Center {...this.props} icon={icon}>{text}</Center>
       }
     })
     let i
