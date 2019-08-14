@@ -1,12 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import classnames from "classnames"
-import {isString} from "lodash"
 
 import primeBadge from "./primeBadge.png"
 import broadcasterBadge from "./broadcasterBadge.png"
 import css from "./style.scss"
-
 
 /**
   * @typedef {{
@@ -32,7 +30,7 @@ export default class Chat extends React.Component {
   }
 
   render() {
-    const content = String(this.props.children).split("\n").map(line => <div className={css.line}>
+    const content = String(this.props.children).split("\n").map((line, index) => <div key={index} className={css.line}>
       <img className={css.badge} src={broadcasterBadge}/>
       <img className={css.badge} src={primeBadge}/>
       <span className={css.name}>Jaidchen</span>
