@@ -38,7 +38,7 @@ export default class Center extends React.Component {
     const textStyle = {
       fontFamily: this.props.centerFont || this.props.contentFont,
       fontWeight: this.props.centerFontWeight || this.props.contentFontWeight,
-      fontSize: this.props.centerFontSize || this.props.contentFontSize,
+      fontSize: `${this.props.centerFontSize || this.props.contentFontSize}px`,
     }
     return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
       {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.icon)} style={iconStyle}/>}
