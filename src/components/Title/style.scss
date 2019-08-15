@@ -13,17 +13,21 @@
   flex: 1
 }
 
-.linkPointerImage {
-  position : absolute;
-  font-size: 20px !important;
-  right    : 5px;
-  top      : 24px;
-  z-index  : 1;
+.linkNotice {
+  position    : relative;
+  align-self  : start;
+  margin-right: -12px;
+  margin-top  : -24px;
+  margin-left : 4px;
 }
 
 .linkIcon {
-  position : absolute;
   font-size: 20px !important;
-  right    : 8px;
-  top      : 8px;
+}
+
+.linkPointerImage {
+  position: absolute;
+  right   : -2px;
+  top     : 27px;
+  z-index : 1;
 }
