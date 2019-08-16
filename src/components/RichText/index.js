@@ -63,7 +63,7 @@ export default class RichText extends React.Component {
           padding: "10px",
           border: `5px solid ${borderColor}`,
         }
-        return <div className={css.qrWrapper}><QRCode bgColor={backgroundColor} fgColor={qrColor} level="L" style={qrStyle} value="553346451999"/></div>
+        return <div className={css.qrWrapper}><QRCode bgColor={backgroundColor} fgColor={qrColor} level="L" style={qrStyle} value={typeMatch.groups.name}/></div>
       }
     })
     let i
