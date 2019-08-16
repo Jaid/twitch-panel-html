@@ -54,14 +54,16 @@ export default class RichText extends React.Component {
         return <Center {...this.props} centerIcon={icon}>{text}</Center>
       }
       if (typeMatch.groups.type === "qr") {
-        const borderColor = color(this.props.themeColor).lightness(40).saturationl(50)
-        const qrColor = color(this.props.themeColor).lightness(82)
+        const backgroundColor = color(this.props.themeColor).lightness(80).saturationl(50)
+        const borderColor = color(this.props.themeColor).lightness(20)
+        const qrColor = color(this.props.themeColor).lightness(20)
         const qrStyle = {
-          width: 164 + 2 * (5 + 10),
+          backgroundColor,
+          width: 180,
           padding: "10px",
           border: `5px solid ${borderColor}`,
         }
-        return <div className={css.qrWrapper}><QRCode bgColor="transparent" fgColor={qrColor} level="L" style={qrStyle} value={typeMatch.groups.name}/></div>
+        return <div className={css.qrWrapper}><QRCode bgColor={backgroundColor} fgColor={qrColor} level="L" style={qrStyle} value="553346451999"/></div>
       }
     })
     let i
