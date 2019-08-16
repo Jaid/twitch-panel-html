@@ -9,6 +9,4 @@ const defaults = {
   mode: "twitch",
 }
 
-query.content = "a{qr:1999}b"
-
 export default Object.assign(defaults, query)
