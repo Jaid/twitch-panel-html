@@ -5,6 +5,7 @@ import color from "color"
 import reactStringReplace from "react-string-replace"
 import Chat from "components/Chat"
 import Center from "components/Center"
+import {QRCode} from "react-qr-svg"
 
 import css from "./style.scss"
 
@@ -51,6 +52,16 @@ export default class RichText extends React.Component {
       if (typeMatch.groups.type === "iconcenter") {
         const {icon, text} = /(?<icon>.+?)\/(?<text>.+)/.exec(typeMatch.groups.name).groups
         return <Center {...this.props} centerIcon={icon}>{text}</Center>
+      }
+      if (typeMatch.groups.type === "qr") {
+        const borderColor = color(this.props.themeColor).lightness(40).saturationl(50)
+        const qrColor = color(this.props.themeColor).lightness(82)
+        const qrStyle = {
+          width: 164 + 2 * (5 + 10),
+          padding: "10px",
+          border: `5px solid ${borderColor}`,
+        }
+        return <div className={css.qrWrapper}><QRCode bgColor="transparent" fgColor={qrColor} level="H" style={qrStyle} value={typeMatch.groups.name}/></div>
       }
     })
     let i
