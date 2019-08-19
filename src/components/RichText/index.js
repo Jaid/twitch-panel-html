@@ -64,6 +64,11 @@ export default class RichText extends React.Component {
         }
         return <div className={css.qrWrapper}><QRCode bgColor={backgroundColor} fgColor="black" level="L" style={qrStyle} value={typeMatch.groups.name}/></div>
       }
+      if (typeMatch.groups.type === "img") {
+        return <div className={css.imageWrapper}>
+          <img className={css.image} src={typeMatch.groups.name}/>
+        </div>
+      }
     })
     let i
     const formattedText = reactStringReplace(processedRichText, "\n", () => {
