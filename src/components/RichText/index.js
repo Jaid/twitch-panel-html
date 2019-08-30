@@ -69,6 +69,14 @@ export default class RichText extends React.Component {
           <img className={css.image} src={typeMatch.groups.name}/>
         </div>
       }
+      if (typeMatch.groups.type === "imghue") {
+        const style = {
+          filter: `hue-rotate(${color(this.props.themeColor).hue()}deg)`,
+        }
+        return <div className={css.imageWrapper}>
+          <img className={css.image} src={typeMatch.groups.name} style={style}/>
+        </div>
+      }
     })
     let i
     const formattedText = reactStringReplace(processedRichText, "\n", () => {
