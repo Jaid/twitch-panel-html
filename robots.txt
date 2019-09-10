@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://panel.jaid.codes/sitemap.xml
+Host: https://panel.jaid.codes
