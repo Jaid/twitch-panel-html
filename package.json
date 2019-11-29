@@ -1,7 +1,6 @@
 {
   "title": "Kappa Panel",
   "domain": "panel.jaid.codes",
-  "private": true,
   "webpackConfigJaid": "webapp",
   "version": "1.20.1",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
@@ -48,5 +47,6 @@
     "start": "webpackPort=1212 START_HOT=1 NODE_ENV=development webpack-dev-server",
     "build:prod": "NODE_ENV=production webpack",
     "build:dev": "NODE_ENV=development webpack"
-  }
+  },
+  "name": "twitch-panel-html"
 }
