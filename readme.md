@@ -5,21 +5,6 @@ Uses HTML and CSS to render TwitchTV panels.
 
 
 
-## Try it out
-Open a browser's JavaScript console and execute:
-
-```javascript
-const scriptElement = document.createElement("script");
-scriptElement.setAttribute("type","text/javascript");
-scriptElement.setAttribute("src","https://unpkg.com/twitch-panel-html@1.20.1");
-document.querySelector("head").appendChild(scriptElement);
-```
-
-The module is now loaded in a variable.
-
-```javascript
-typeof twitch-panel-html.default
-```
 
 
 ## License
