@@ -51,5 +51,9 @@
   },
   "name": "twitch-panel-html",
   "description": "Uses HTML and CSS to render TwitchTV panels.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/twitch-panel-html"
+  }
 }
