@@ -50,5 +50,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "twitch-panel-html",
-  "description": "Uses HTML and CSS to render TwitchTV panels."
+  "description": "Uses HTML and CSS to render TwitchTV panels.",
+  "funding": "https://github.com/sponsors/jaid"
 }
