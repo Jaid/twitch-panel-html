@@ -1,8 +1,9 @@
-import React from "react"
 import classnames from "classnames"
-import propTypes, {defaultProps} from "lib/propTypes"
 import color from "color"
 import PropTypes from "prop-types"
+import React from "react"
+
+import propTypes, {defaultProps} from "lib/propTypes"
 
 import css from "./style.scss"
 

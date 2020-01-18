@@ -1,10 +1,11 @@
-import React from "react"
 import classnames from "classnames"
 import color from "color"
+import React from "react"
+
 import propTypes, {defaultProps} from "lib/propTypes"
 
-import primeBadge from "./primeBadge.png"
 import broadcasterBadge from "./broadcasterBadge.png"
+import primeBadge from "./primeBadge.png"
 import css from "./style.scss"
 
 /**

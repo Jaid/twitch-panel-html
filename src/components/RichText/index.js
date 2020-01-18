@@ -1,11 +1,12 @@
-import React from "react"
 import classnames from "classnames"
-import propTypes, {defaultProps} from "lib/propTypes"
 import color from "color"
-import reactStringReplace from "react-string-replace"
-import Chat from "components/Chat"
-import Center from "components/Center"
+import React from "react"
 import {QRCode} from "react-qr-svg"
+import reactStringReplace from "react-string-replace"
+
+import propTypes, {defaultProps} from "lib/propTypes"
+import Center from "components/Center"
+import Chat from "components/Chat"
 
 import css from "./style.scss"
 

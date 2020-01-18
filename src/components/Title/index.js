@@ -1,7 +1,8 @@
-import React from "react"
 import classnames from "classnames"
-import propTypes from "lib/propTypes"
 import color from "color"
+import React from "react"
+
+import propTypes from "lib/propTypes"
 
 import pointerImage from "./pointer.png"
 import css from "./style.scss"

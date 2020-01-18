@@ -1,9 +1,10 @@
-import React from "react"
 import classnames from "classnames"
 import color from "color"
-import Title from "components/Title"
+import React from "react"
+
 import propTypes, {defaultProps} from "lib/propTypes"
 import RichText from "components/RichText"
+import Title from "components/Title"
 
 import css from "./style.scss"
 
