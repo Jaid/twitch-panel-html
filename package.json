@@ -31,7 +31,7 @@
     "caniuse-lite": "^1.0.30001021",
     "change-case": "^4.1.1",
     "eslint": "^6.8.0",
-    "eslint-config-jaid-react": "^1.42.0",
+    "eslint-config-jaid-react": "^1.42.1",
     "globby": "^11.0.0",
     "jest": "^24.9.0",
     "param-case": "^3.0.3",
