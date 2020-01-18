@@ -6,6 +6,9 @@
 
 **Uses HTML and CSS to render TwitchTV panels.**
 
+#### Opinionated
+
+This project is tailored to my personal needs and workflows and therefore highly opinionated. Feel free to use it or get inspired by it, but please do not get frustrated if you come across weird features or have difficulties integrating it in your own ecosystem.
 
 
 
