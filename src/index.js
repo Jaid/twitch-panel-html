@@ -3,6 +3,8 @@ import ReactDom from "react-dom"
 
 import App from "components/App"
 
+require("offline-plugin/runtime").install()
+
 const rootNode = document.createElement("div")
 document.body.append(rootNode)
 
