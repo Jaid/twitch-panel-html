@@ -9,4 +9,10 @@ const defaults = {
   mode: "twitch",
 }
 
-export default Object.assign(defaults, query)
+Object.assign(defaults, query)
+
+if (defaults.debug !== undefined) {
+  defaults.content = "{imgcenter:https://i.imgur.com/gjUoNFG.png::Zugeschnitten auf Black Desert Online}abc"
+}
+
+export default defaults

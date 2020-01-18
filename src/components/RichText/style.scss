@@ -10,4 +10,20 @@
   text-align   : center;
 }
 
+.imageBlock {
+  margin-top   : 4px;
+  margin-bottom: 4px;
+  display      : flex;
+  align-items  : center;
+
+  &>img {
+    margin-right: 12px;
+  }
+
+  &>span {
+    color: green;
+    flex : 1;
+  }
+}
+
 .image {}

@@ -70,6 +70,18 @@ export default class RichText extends React.Component {
           <img className={css.image} src={typeMatch.groups.name}/>
         </div>
       }
+      if (typeMatch.groups.type === "imgcenter") {
+        const [imgSrc, text, textColor = "white"] = typeMatch.groups.name.split("::")
+        const spanStyle = {
+          color: textColor,
+        }
+        return <Center>
+          <div className={css.imageBlock}>
+            <img src={imgSrc}/>
+            <span style={spanStyle}>{text}</span>
+          </div>
+        </Center>
+      }
       if (typeMatch.groups.type === "imghue") {
         const style = {
           filter: `hue-rotate(${color(this.props.themeColor).hue()}deg)`,
