@@ -2,7 +2,7 @@
   "title": "Kappa Panel",
   "domain": "panel.jaid.codes",
   "webpackConfigJaid": "webapp",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@babel/runtime": "^7.8.3",
