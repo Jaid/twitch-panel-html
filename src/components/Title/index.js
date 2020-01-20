@@ -1,6 +1,7 @@
 import classnames from "classnames"
 import color from "color"
 import React from "react"
+import Picture from "react-modern-picture"
 
 import propTypes from "lib/propTypes"
 
@@ -47,7 +48,11 @@ export default class Title extends React.Component {
      return <div className={classnames(css.container, this.props.className)} style={wrapperStyle}>
        {this.props.icon && <i className={classnames("fa", `fa-${this.props.icon}`, css.titleIcon)} style={iconStyle}/>}
        <span className={css.text} style={textStyle}>{content}</span>
-       {this.props.hasLink && <span className={css.linkNotice}><img className={css.linkPointerImage} src={pointerImage} style={pointerStyle}/><i className={classnames("fa", "fa-link", css.linkIcon)}/></span>}
+       {this.props.hasLink
+       && <span className={css.linkNotice}>
+         <Picture className={css.linkPointerImage} input={pointerImage} style={pointerStyle}/>
+         <i className={classnames("fa", "fa-link", css.linkIcon)}/>
+       </span>}
      </div>
    }
 

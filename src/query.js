@@ -12,7 +12,7 @@ const defaults = {
 Object.assign(defaults, query)
 
 if (defaults.debug !== undefined) {
-  defaults.content = "{imgcenter:https://i.imgur.com/gjUoNFG.png::Zugeschnitten auf Black Desert Online}abc"
+  defaults.content = "{chat:abc}"
 }
 
 export default defaults

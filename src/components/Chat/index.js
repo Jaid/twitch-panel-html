@@ -1,6 +1,7 @@
 import classnames from "classnames"
 import color from "color"
 import React from "react"
+import Picture from "react-modern-picture"
 
 import propTypes, {defaultProps} from "lib/propTypes"
 
@@ -30,8 +31,8 @@ export default class Chat extends React.Component {
       color: color(this.props.themeColor).lightness(75),
     }
     const content = String(this.props.children).split("\n").map((line, index) => <div key={index} className={css.line}>
-      <img className={css.badge} src={broadcasterBadge}/>
-      <img className={css.badge} src={primeBadge}/>
+      <Picture className={css.badge} input={broadcasterBadge}/>
+      <Picture className={css.badge} input={primeBadge}/>
       <span className={css.name} style={nicknameStyle}>Jaidchen</span>
       <span className={css.colon}>:</span>
       <span className={css.message}>{line}</span>
