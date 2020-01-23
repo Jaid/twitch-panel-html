@@ -75,7 +75,7 @@ export default class RichText extends React.Component {
         const spanStyle = {
           color: textColor,
         }
-        return <Center>
+        return <Center {...this.props}>
           <div className={css.imageBlock}>
             <img src={imgSrc}/>
             <span style={spanStyle}>{text}</span>
