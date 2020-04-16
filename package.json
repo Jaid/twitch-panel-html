@@ -56,5 +56,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/twitch-panel-html"
-  }
+  },
+  "homepage": "https://panel.jaid.codes/?icon=github",
+  "keywords": []
 }
